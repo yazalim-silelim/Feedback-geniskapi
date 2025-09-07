@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>Discord Rol Talep Formu</title>
+<style>
+/* Genel ayarlar */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #2c2f33, #23272a);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Form kutusu */
+.form-container {
+    background: #2f3136;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Başlık */
+h2 {
+    margin-bottom: 20px;
+    color: #7289da;
+}
+
+/* Input ve select */
+input[type="text"], select, textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: none;
+    background: #36393f;
+    color: #fff;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+input[type="text"]:focus, select:focus, textarea:focus {
+    outline: none;
+    background: #40444b;
+}
+
+/* Buton */
+input[type="submit"] {
+    width: 100%;
+    padding: 14px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #7289da, #99aab5);
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+input[type="submit"]:hover {
+    background: linear-gradient(90deg, #99aab5, #7289da);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Textarea */
+textarea {
+    resize: none;
+}
+
+/* Alt bilgi */
+p {
+    font-size: 12px;
+    color: #b9bbbe;
+    margin-top: 15px;
+}
+</style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Discord Rol Talep Formu</h2>
+    <form action="mailto:feedback.geniskapi@gmail.com" method="post" enctype="text/plain">
+        <input type="text" name="username" placeholder="Discord Kullanıcı Adınız (Örn: kullanici#1234)" required>
+
+        <select name="role" required>
+            <option value="" disabled selected>Almak istediğiniz rolü seçin</option>
+            <option>🧪 Beta Testçi</option>
+            <option>🔧 Yardımcı</option>
+            <option>🎉 Yeni Başlayan</option>
+            <option>💎 Mükemmel Destek</option>
+            <option>🐛 Bug Avcısı</option>
+            <option>🧪 Deneysel Ekip</option>
+            <option>💬 Yılın Aktifi</option>
+            <option>İlk 10. Kişi</option>
+        </select>
+
+        <textarea name="message" rows="4" placeholder="Mesaj eklemek isterseniz..."></textarea>
+
+        <input type="submit" value="Talep Gönder">
+    </form>
+    <p>Bu form e-posta uygulamanızı açacak ve talebiniz <b>feedback.geniskapi@gmail.com</b> adresine gönderilecektir.</p>
+</div>
+
+</body>
+</html>
